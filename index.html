@@ -6,33 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zurit Page</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body class="bg-white text-gray-800">
 
     <header class="border-gray-200">
-        <div class="max-w-7xl mx-auto flex justify-center items-center py-4 px-29 mt-5">
+        <div class="max-w-7xl mx-auto flex justify-center items-center py-4 px-4 sm:px-6 lg:px-28 -5">
             <div class="flex-1"></div>
 
             <div class="flex justify-center flex-1">
                 <img src="images/logo.png" alt="logo" class="mx-4 h-12">
             </div>
 
-            <div class="flex items-center space-x-1 text-sm text-gray-200 flex-1 justify-end">
+            <div class="flex items-center space-x-1 text-sm text-gray-300 flex-1 justify-end">
                 <a href="#">sign in</a>
                 <span>or</span>
-                <a href="#" class="hover:text-orange-600">Join</a>
+                <a href="#">Join</a>
                 <span>|</span>
                 <img src="images/search.png" alt="search" class="w-8 h-6">
             </div>
         </div>
 
         <div class="border-t text-gray-200"></div>
-        <div class="max-w-7xl mx-auto px-29">
-            <nav class="py-4 text-sm flex space-x-11 text-gray-700 text-balance">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-28">
+            <nav class="hidden lg:flex py-4 text-sm flex-wrap space-x-3 sm:space-x-10.5 text-gray-700">
                 <a href="#">Tiles</a>
                 <a href="#">Sanitary</a>
                 <a href="#">Electrical fittings</a>
@@ -40,16 +38,39 @@
                 <a href="#">Iron fittings</a>
                 <a href="#">Doors</a>
                 <a href="#">Kitchen</a>
-                <span class="Color-gray-200">|</span>
-                <a href="#" >Services</a>
+                <span class="text-gray-200 ml-2">|</span>
+                <a href="#">Services</a>
                 <a href="#">About us</a>
                 <a href="#">Contact Us</a>
             </nav>
-            <div class="border-black border-b-4 border-double">
+
+            <div class="lg:hidden">
+                <button id="hamburgerBtn" class="focus:outline-none">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
+            <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-gray-200">
+                <nav class="px-4 py-4 flex flex-col space-y-3 text-gray-700 text-sm">
+                    <a href="#">Tiles</a>
+                    <a href="#">Sanitary</a>
+                    <a href="#">Electrical fittings</a>
+                    <a href="#">Light Fittings</a>
+                    <a href="#">Iron fittings</a>
+                    <a href="#">Doors</a>
+                    <a href="#">Kitchen</a>
+                    <a href="#">Services</a>
+                    <a href="#">About us</a>
+                    <a href="#">Contact Us</a>
+                </nav>
+            </div>
+            <div class="border-black border-b-4 border-double"></div>
+        </div>
     </header>
 
-    <div class="px-29 py-4 text-xs flex items-center page-title">
+    <div class="px-4 sm:px-6 lg:px-28 py-4 text-xs flex items-center page-title">
         Home
         <img src="images/>.png" alt=">" class="mx-2 w-3 h-3">
         Electrical Fittings
@@ -57,38 +78,55 @@
         3 Pin Socket
     </div>
 
-    <main class="px-29 grid grid-cols-1 lg:grid-cols-9 gap-12">
+    <main class="px-4 sm:px-6 lg:px-28 grid grid-cols-1 lg:grid-cols-7 gap-6 lg:gap-12">
 
-        <div class="lg:col-span-6">
-            <img src="images/1.png" class="w-[800px]" alt="3 Pin Socket">
-            <div class="flex justify-start mt-5 space-x-4">
-                <img src="images/2.png" class="w-40 border-[4px] border-gray-200">
-                <img src="images/3.png" class="w-40">
-                <img src="images/4.png" class="w-40">
+        <div class="lg:col-span-5 mb-5">
+            <img src="images/1.png" class="w-full max-w-[700px] max-h-[600px]" alt="3 Pin Socket">
+            <div class="flex justify-start mt-6 mb-3 sm:space-x-6">
+                <img src="images/2.png" class="w-20 sm:w-28 lg:w-40">
+                <img src="images/3.png" class="w-20 sm:w-28 lg:w-40">
+                <img src="images/4.png" class="w-20 sm:w-28 lg:w-40">
             </div>
+            <div>
+                <p class="font-medium mb-2">COLOR</p>
+                <div class="flex space-x-2 mb-5">
+                    <div class="w-5 h-5 rounded-full bg-[#BF6E24] border border-gray-300 cursor-pointer"></div>
+                    <div class="w-5 h-5 rounded-full bg-gray-300 border border-gray-400 cursor-pointer"></div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3">
+                <p class="font-medium">SIZE</p>
+                <div class="flex space-x-2">
+                    <button class="w-8 h-8 border border-gray-300 flex items-center justify-center text-gray-400">S</button>
+                    <button class="w-8 h-8 border border-gray-300 flex items-center justify-center text-gray-400">M</button>
+                    <button class="w-8 h-8 border-2 border-gray-400 flex items-center justify-center text-gray-400">L</button>
+                </div>
+            </div>
+
+
         </div>
 
-        <div class="lg:col-span-3">
-            <h1 class="text-xl font-semibold tracking-tight">3 PIN SOCKET</h1>
+        <div class="lg:col-span-2">
+            <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold tracking-tight">3 PIN SOCKET</h1>
             <p class="text-sm text-[#a6a4a4] mt-1">Zurit Designs</p>
-            <div class="border-b border-gray-200 mt-3 mb-5"></div>
+            <div class="border-b border-gray-200 mt-2 mb-3"></div>
 
             <textarea
-                class="w-full border border-gray-300 bg-gray-100 rounded-sm p-3 text-sm mb-4 focus:outline-none focus:ring-0"
+                class="w-full border border-gray-300 bg-gray-100 rounded-sm p-3 text-sm mb-3 focus:outline-none focus:ring-0"
                 rows="3"
-                placeholder="Hello, I'm interested in buying this piece, could you please provide me with more information? I"></textarea>
+                placeholder="Hello, I'm interested in buying this piece, could you please provide me with more information?"></textarea>
 
             <button class="w-full bg-[#BF6E24] text-white py-3 text-sm font-normal mb-2">
                 Contact Us
             </button>
 
-            <p class="text-sm border-b text-[#a6a4a4] border-gray-200 mt-4 mb-4 pb-4">
+            <p class="text-sm border-b text-[#a6a4a4] border-gray-200 mt-2 mb-3 pb-4">
                 Or call Zurit :
                 <a href="tel:+254800304" class="text-[#BF6E24]">(254) 800-304</a>
             </p>
 
             <h2 class="font-bold text-sm mb-2">DESCRIPTION</h2>
-            <p class="text-sm text-[#4f5051] font-thin font-['Inter',sans-serif] mb-4">
+            <p class="text-sm text-[#4f5051] font-thin font-['Inter',sans-serif] mb-3">
                 The switch contacts are made of high quality silver alloy material,
                 which have a good performance against electric arc and melt weld.
                 The on-off operations exceed 40000 times. The socket are made of
@@ -110,34 +148,13 @@
                 </div>
             </div>
         </div>
-        </div>
-
-        <div>
-            <p class="font-medium mb-2">COLOR</p>
-
-            <div class="flex space-x-2 mb-4">
-                <div class="w-5 h-5 rounded-full bg-[#BF6E24] border border-gray-300 cursor-pointer"></div>
-                <div class="w-5 h-5 rounded-full bg-gray-300 border border-gray-400 cursor-pointer"></div>
-            </div>
-
-            <div class="grid grid-cols-5 gap-1 w-40">
-                <p class="text-center">SIZE</p>
-                <div></div>
-                <button
-                    class="aspect-square border border-gray-300 flex items-center justify-center text-gray-400">S</button>
-                <button
-                    class="aspect-square border border-gray-300 flex items-center justify-center text-gray-400">M</button>
-                <button
-                    class="aspect-square border-[2px] border-gray-400  flex items-center justify-center text-gray-400">L</button>
-            </div>
-
-        </div>
     </main>
 
-    <div class="border-t text-gray-200 mt-12"></div>
-    <section class="max-w-7xl mx-auto px-29 py-8">
+    <div class="border-t text-gray-200 mt-10"></div>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-28 py-8">
         <h3 class="text-lg font-semibold mb-4">MORE PRODUCTS LIKE THIS</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
             <div>
                 <img src="images/5.png" class="w-full">
                 <p class="mt-2 text-sm font-medium">Schneider Electric Bell</p>
@@ -161,21 +178,21 @@
         </div>
     </section>
 
-    <section class="bg-[#BF6E24] text-white py-8 px-10">
-        <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center">
+    <section class="bg-[#BF6E24] text-white py-6 px-4 sm:px-6 lg:px-28">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-4 md:gap-8">
 
-            <p class="text-3xl font-medium whitespace-nowrap">Join our newsletter</p>
+            <p class="text-2xl sm:text-3xl font-medium whitespace-nowrap">Join our newsletter</p>
 
-            <p class="text-sm  md:text-center flex-1 text-balance">
+            <p class="text-sm md:text-center flex-1 text-balance">
                 Enter your email and we'll keep you <br> posted with news and updates!
             </p>
 
             <div class="grid grid-rows-2 grid-cols-[2fr_1fr] w-full md:w-auto border border-white overflow-hidden">
-
                 <input type="email" placeholder="Your email"
-                    class="px-8 py-4 col-span-4 bg-[#BF6E24] text-white placeholder-white focus:outline-none border-b border-white">
+                    class="px-4 sm:px-8 py-4 col-span-4 bg-[#BF6E24] text-white placeholder-white focus:outline-none border-b border-white">
 
-                <p class="px-8 py-4 bg-[#BF6E24] text-white focus:outline-none border-r border-white appearance-none">
+                <p
+                    class="px-4 sm:px-8 py-4 bg-[#BF6E24] text-white focus:outline-none border-r border-white appearance-none">
                     Choose your country
                 </p>
 
@@ -183,20 +200,21 @@
                     Send
                 </button>
             </div>
+        </div>
     </section>
 
-    <footer class="bg-[#212223] text-gray-400 text-sm py-10">
-        <div class="max-w-7xl mx-2 grid grid-cols-2 md:grid-cols-5  mx-20">
+    <footer class="bg-[#212223] text-gray-400 text-sm py-29">
+        <div class="max-w-7xl mx-2 grid grid-cols-2 md:grid-cols-5 px-4 sm:px-6 lg:px-28 gap-4">
             <div>
                 <h4 class="text-[#747576]">Contact</h4>
                 <p class="text-[#d2d2d2] mb-2">6th Floor, The Chancery,<br>Valley Road, Nairobi, Kenya</p>
-                <p class="text-[#d2d2d2] mb-2">Tel +254(0) 20 3929 000</p>
+                <p class="text-[#d2d2d2] mb-5">Tel +254(0) 20 3929 000</p>
                 <p class="text-[#747576]">General requests</p>
-                <p class="text-[#d2d2d2] mb-2">support@zurit.com</p>
+                <p class="text-[#d2d2d2] mb-5">support@zurit.com</p>
                 <p class="text-[#747576]">Online shop</p>
                 <p class="text-[#d2d2d2] mb-2">Zurit.com/products</p>
             </div>
-            <div>
+            <div class="ml-8">
                 <h4 class="text-[#747576]">Products</h4>
                 <ul class="text-[#d2d2d2] mb-2">
                     <li>Tiles</li>
@@ -204,8 +222,8 @@
                     <li>Electrical fittings</li>
                     <li>Light Fittings</li>
                     <li>Iron fittings</li>
-                    <li> Doors</li>
-                    <li> Kitchen</li>
+                    <li>Doors</li>
+                    <li>Kitchen</li>
                 </ul>
             </div>
             <div>
@@ -224,23 +242,24 @@
                     <li>Instagram</li>
                     <li>Newsletter</li>
                 </ul>
-                <div>
-                </div>
-                <h4 class="text-[#747576]">Downloads</h4>
+                <h4 class="text-[#747576] mt-11">Downloads</h4>
                 <ul class="text-[#d2d2d2] mb-2">
                     <li>Catalogue</li>
                     <li>Brochure</li>
                 </ul>
             </div>
             <div class="flex justify-end">
-                <img src="images/scroll.png" alt="scroll" class="w-18 h-18">
-            </div>
-            <div>
+                <img src="images/scroll.png" alt="scroll" class="w-14 h-14">
             </div>
         </div>
-        <p class="text-center text-xs te[#747576]">&copy; 2018 Zurit by Cytonn, LLP.</p>
     </footer>
-    </div>
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
